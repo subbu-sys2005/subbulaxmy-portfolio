@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2f002f;
+  font-family: 'Quicksand', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.App {
+  overflow-x: hidden;
+}
