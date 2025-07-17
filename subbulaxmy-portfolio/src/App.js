@@ -1,25 +1,20 @@
-// App.js
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import RegisterForm from './pages/RegisterForm';
+import LoginForm from './pages/LoginForm';
+import Dashboard from './pages/Dashboard';
 
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<RegisterForm />} />
+        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
